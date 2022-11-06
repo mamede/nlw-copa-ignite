@@ -32,7 +32,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
 
 
   const [request, response, promptAsync] = Google.useAuthRequest({
-    clientId: clientID,
+    clientId: `${clientID}`,
     redirectUri: AuthSessions.makeRedirectUri({ useProxy: true }),
     scopes: ['profile', 'email'],
   });
